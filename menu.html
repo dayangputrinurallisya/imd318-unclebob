@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>Menu</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel= "shortcut Icon" type="image/png" href="chicken.png">
+
+    <style>
+        /* Digital Clock Styling */
+        .digital-clock-container {
+            position: absolute;
+            right: 20px; /* Position on the top right */
+            top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white; /* Text color */
+            text-align: right;
+        }
+
+        .digital-clock {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .digital-day {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .digital-date {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+    </style>
+
+</head>
+
+<style>
+
+    body {
+    background-image: url('images/unclebg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+</style>
+
+<body>
+    <div id="loader">
+        <div id="status"></div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock" class="digital-clock"></div>
+        <div id="digital-day" class="digital-day"></div>
+        <div id="digital-date" class="digital-date"></div>
+    </div>
+
+    <div id="site-header">
+        <header id="header" class="header-block-top">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu">
+                        <!-- navbar -->
+                        <nav class="navbar navbar-default" id="mainNav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="logo">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <img src="images/logo-unclebob.png" alt="" width="145" height="70">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="about_us.html">About us</a></li>
+                                    <li class="active"><a href="menu.html">Menu</a></li>
+                                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                                    <li class="active"><a href="blog.html">Branch</a></li>
+                                    <li class="active"><a href="certification.html">Certification</a></li>
+                                    <li class="active"><a href="contact_us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <!-- end nav-collapse -->
+                        </nav>
+                        <!-- end navbar -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </header>
+        <!-- end header -->
+    </div>
+	<!-- end site-header -->
+
+    <div class="special-menu pad-top-100 parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="block-title color-white text-center"> Our Menu </h2>
+                        <h5 class="title-caption text-center"> UncleBob Popular Menu. </h5>
+                    </div>
+
+                    <div class="special-box">
+                        <div id="owl-demo">
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            FRIED CHICKEN
+                                            <div class="line"></div>
+                                            <div class="dit-line">Crispy yet juicy and tender, skinless and fatless to enjoy without worrying about health.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/fried-chicken-uncle-bob.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            FRIED GIANT SQUID
+                                            <div class="line"></div>
+                                            <div class="dit-line">Must try for die-hard fan of seafood, extra larged squid cooked to perfection to maintain tenderness and juiceness.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/fried-giant-squid-uncle-bob.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            CHICKEN POPCORN
+                                            <div class="line"></div>
+                                            <div class="dit-line">Bite-sized nibbles, deep-fried, boneless and easily chewable.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/popcorn chicken.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            JUMBO CHEESE HOTDOG
+                                            <div class="line"></div>
+                                            <div class="dit-line">Immense gluttory satisfaction with melty gooey cheese filling.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/jumbo cheese.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            CRISPY CHICKEN SATAY
+                                            <div class="line"></div>
+                                            <div class="dit-line">Boneless and easily chewable, convenient snack to have on go.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/crispy-chicken-satay-uncle-bob.png" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            FRIED NOODLE CHICKEN
+                                            <div class="line"></div>
+                                            <div class="dit-line">Mee Goreng X Fried Chicken, to add a dose of crunchiness.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/fried-noodle-chicken-uncle-bob.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            CHICKEN RICE
+                                            <div class="line"></div>
+                                            <div class="dit-line">Fragrant yellow rice, garnished with fried onions and some vegetables on the side.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/chicken-rice-uncle-bob.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            CHICKEN BURGER
+                                            <div class="line"></div>
+                                            <div class="dit-line">The perfect combination of crispy chicken and fluffy bun.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/chicken burger uncle bob.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            SHAKER FRIES
+                                            <div class="line"></div>
+                                            <div class="dit-line">Perfect blend of crispy fries dusted with savory chili seasoning.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/shaker fries uncle bob.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                            <div class="item item-type-zoom">
+                                <a href="#" class="item-hover">
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            POTATO CHIPS
+                                            <div class="line"></div>
+                                            <div class="dit-line">Experience original and spicy snacks with pure flavor delights.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-img">
+                                    <img src="images/potato chips uncle bob.jpg" alt="sp-menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end special-box -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end special-menu -->
+
+     <!-- ALL JS FILES -->
+     <script src="js/all.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <!-- ALL PLUGINS -->
+     <script src="js/custom.js"></script>
+     <!--ACTIVE NAVIGATION BAR-->
+      <script>
+        // Get the current URL
+        var currentURL = window.location.href;
+      
+        // Get all menu items
+        var menuItems = document.querySelectorAll('nav ul li a');
+      
+        // Loop through each menu item
+        menuItems.forEach(function(menuItem) {
+          // Check if the menu item's href matches the current URL
+          if (menuItem.href === currentURL) {
+            menuItem.parentNode.classList.add('active'); 
+          } else {
+            menuItem.parentNode.classList.remove('active'); 
+          }
+        });
+      </script>
+      <!--Clock-->
+     <script>
+        function updateClock() {
+    var now = new Date();
+    
+    // Get time components
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var amPm = hours >= 12 ? "PM" : "AM";
+
+    // Convert 24-hour to 12-hour format
+    hours = hours % 12 || 12; // If hour is 0, change to 12
+
+    // Format time to always show two digits
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    var timeString = hours + ":" + minutes + ":" + seconds + " " + amPm;
+    document.getElementById("digital-clock").textContent = timeString;
+
+    // Get day and date
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    var day = days[now.getDay()];
+    var date = now.getDate();
+    var month = months[now.getMonth()];
+    var year = now.getFullYear();
+
+    var fullDate = date + " " + month + " " + year;
+
+    document.getElementById("digital-day").textContent = day;
+    document.getElementById("digital-date").textContent = fullDate;
+}
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
+
+</body>
+</html>

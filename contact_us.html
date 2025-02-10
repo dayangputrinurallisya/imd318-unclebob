@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>Contact Us</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel= "shortcut Icon" type="image/png" href="chicken.png">
+
+    <style>
+        /* Digital Clock Styling */
+        .digital-clock-container {
+            position: absolute;
+            right: 20px; /* Position on the top right */
+            top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white; /* Text color */
+            text-align: right;
+        }
+
+        .digital-clock {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .digital-day {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .digital-date {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+    </style>
+
+</head>
+
+<style>
+
+body {
+background-image: url('images/unclebg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+margin: 0;
+padding: 0;
+font-family: roboto, sans-serif;
+}
+
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        width: 100%;
+        height: 107vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .content {
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 10rem;
+        margin: 0;
+	color: yellow;
+    }
+
+    p {
+        color: yellow;
+        font-size: 2rem;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 2rem;
+        color: red;
+        text-decoration: none;
+        border: 2px solid red;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: red;
+        color: white;
+    }
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-form, .contact-details {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: yellow;
+    color: red;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+}
+
+.contact-details {
+    color: #333;
+    font-size: 15rem;
+    line-height: 1.8;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-details h2 {
+    color: red;
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+
+.contact-details i {
+    font-size: 20px; /* Make the icons bigger */
+    margin-right: 10px; /* Add spacing between icon and text */
+    color: yellow; /* Match the theme color */
+}
+
+.contact-details p{
+ color: black;
+  font-size: 2rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+        .testimonial-section {
+            text-align: center;
+            padding: 100px 50px;
+            background-color: white;
+            margin: 50px auto;
+            max-width: 1000px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-section h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .testimonial {
+            font-size: 1.5rem;
+            color: #555;
+            margin: 30px 0;
+            line-height: 2;
+            display: none;
+        }
+
+        .testimonial.active {
+            display: block;
+        }
+
+        .testimonial img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .author img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .author-info .rating {
+            margin-top: 5px;
+            font-size: 1.2rem;
+            color: #ffcc00; /* Yellow for star icons */
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .dots span {
+            height: 15px;
+            width: 15px;
+            margin: 0 8px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dots span.active {
+            background-color: yellow;
+        }
+
+</style>
+<body>
+
+<div class="top-section">
+    <div id="loader">
+        <div id="status"></div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock" class="digital-clock"></div>
+        <div id="digital-day" class="digital-day"></div>
+        <div id="digital-date" class="digital-date"></div>
+    </div>
+
+    <div id="site-header">
+        <header id="header" class="header-block-top">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu">
+                        <!-- navbar -->
+                        <nav class="navbar navbar-default" id="mainNav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="logo">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <img src="images/logo-unclebob.png" alt="" width="145" height="70">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="about_us.html">About us</a></li>
+                                    <li class="active"><a href="menu.html">Menu</a></li>
+                                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                                    <li class="active"><a href="blog.html">Branch</a></li>
+                                    <li class="active"><a href="certification.html">Certification</a></li>
+                                    <li class="active"><a href="contact_us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <!-- end nav-collapse -->
+                        </nav>
+                        <!-- end navbar -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </header>
+        <!-- end header -->
+    </div>
+	<!-- end site-header -->
+
+    <!-- Contact Us Section -->
+    <div class="overlay">
+        <div class="content">
+            <h1><b>Contact Us</h1> 
+            <p color="yellow">Feel free to contact us.</p>
+            <a href="#contact-form" class="btn">Get Started</a>
+        </div>
+    </div>
+</div>
+
+  <br>
+<br>
+
+<section id="contact-form">
+<!-- Contact Form Section -->
+<div class="contact-container">
+    <div class="contact-form" action="#" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="">
+        </div>
+  
+        <div>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" placeholder="">
+        </div>
+<div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="">
+        </div>
+        <div>
+            <label for="message"> Message</label>
+            <textarea id="message" placeholder=""></textarea>
+        </div>
+        <button type="submit">Send Us Message</button>
+    </div>
+    <div class="contact-details">
+        <h2><b>Contact Details</b></h2>
+        <p><i class="fas fa-map-marker-alt"></i> Lot 6, No. 11 Hing Industrial Estate,
+        Lorong Undan, Jalan Tuaran, Inanam, <br>88450 Kota Kinabalu, Sabah, Malaysia</p>
+        <p><i class="fas fa-phone-alt"></i> +60 14-832 2235</p>
+        <p><i class="fas fa-envelope"></i> general@unclebob.com.my</p>
+        <p>
+          <a href="https://www.instagram.com/unclebobmalaysia?igsh=eDJmdm5tM2Nqd29h" target="_blank">
+            <p><i class="fab fa-instagram"></i> Uncle Bob Official Instagram</p>
+          </a>
+          <a href="https://www.facebook.com/UncleBobFriedChicken" target="_blank">
+            <p><i class="fab fa-facebook-f"></i> Uncle Bob Official Facebook</p>
+          </a>
+        </p>
+      </div>
+
+<script>
+    document.querySelector('.btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector('#contact-form').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+</section>
+
+
+<section id="testimonial"> 
+ <div class="testimonial-section">
+        <h2><b>REVIEW</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial active" id="testimonial-1">       
+                "First time ordering from uncle Bob. The spice level is tolerable would order again. Plus, it's quite cheap."
+                <div class="author">
+                    <img src="images/pic-2.jpg" alt="Author Image 1">
+                    <div class="author-info">
+                        <h4>Melissa Howard</h4>
+                        <!-- Add star icons for rating -->
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial" id="testimonial-2">
+                "Their rice and chicken popcorn are my top fav menu from this."
+                <div class="author">
+                    <img src="images/pic-1.jpg" alt="Author Image 2">
+                    <div class="author-info">
+                        <h4>Cherry</h4>
+                        <!-- Add star icons for rating -->
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ <div class="testimonial" id="testimonial-3">
+                "The packging was okay but i'm not satisfying with the portion for popcorn chicken."
+                <div class="author">
+                    <img src="images/pic-3.jpg" alt="Author Image 3">
+                    <div class="author-info">
+                        <h4>Henry Hudson</h4>
+                        <!-- Add star icons for rating -->
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ <div class="testimonial" id="testimonial-4">
+                "Overall satisfied but mayble a little too much on the seasonings"
+                <div class="author">
+                    <img src="images/pic-4.jpg" alt="Author Image 4">
+                    <div class="author-info">
+                        <h4>Jack</h4>
+                        <!-- Add star icons for rating -->
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                           
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  <div class="testimonial" id="testimonial-5">       
+                "Good customer service"
+                <div class="author">
+                    <img src="images/pic-7.jpg" alt="Author Image 5">
+                    <div class="author-info">
+                        <h4>Abigail Lee</h4>
+                        <!-- Add star icons for rating -->
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+</div>
+    <div class="testimonial" id="testimonial-6">
+                "Delicious and it still hot while serving"
+                <div class="author">
+                    <img src="images/pic-6.jpg" alt="Author Image 6">
+                    <div class="author-info">
+                        <h4>Xixi</h4>
+                        <!-- Add star icons for rating -->
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                           
+                        </div>
+                    </div>
+                </div>
+        </div>
+    <div class="testimonial" id="testimonial-7">
+                "I ordered for nasi kuning fried chicken but instead I got nasi kuning w popcorn."
+                <div class="author">
+                    <img src="images/pic-5.jpg" alt="Author Image 7">
+                    <div class="author-info">
+                        <h4>Johson chang</h4>
+                        <!-- Add star icons for rating -->
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+</div>
+   
+        <div class="dots">
+            <span class="dot active" data-id="1"></span>
+            <span class="dot" data-id="2"></span>
+	     <span class="dot" data-id="3"></span>
+            <span class="dot" data-id="4"></span>
+	    <span class="dot" data-id="5"></span>
+	     <span class="dot" data-id="6"></span>
+            <span class="dot" data-id="7"></span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for the carousel functionality
+        const testimonials = document.querySelectorAll(".testimonial");
+        const dots = document.querySelectorAll(".dot");
+
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.toggle("active", i === index);
+            });
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle("active", i === index);
+            });
+
+            currentIndex = index;
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                showTestimonial(index);
+            });
+        });
+
+        // Auto carousel every 5 seconds
+        setInterval(() => {
+            const nextIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(nextIndex);
+        }, 5000);
+    </script>
+</section>
+
+ <div class="footer-box pad-top-70">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-in-main">
+                        <div class="footer-logo">
+                            <div class="text-center">
+                                <img src="images/logo-unclebob.png" alt="" width="180" height="90">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-a">
+                                <h3>About Us</h3>
+                                <p>Uncle BOB was born in the year 2002 to offer tasty Taiwanese street snacks to the Malaysian public. </p>
+                                <ul class="socials-box footer-socials pull-left">
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa  fa-facebook"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-twitter"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-google-plus"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-pinterest"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="social-circle-border"><i class="fa fa-linkedin"></i></div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- end footer-box-a -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-b">
+                                <h3>New Menu</h3>
+                                <ul>
+                                    <li><a href="#">KBob Fried Chicken</a></li>
+                                    <li><a href="#">Fried Giant Squid</a></li>
+                                    <li><a href="#">Jumbo Cheese Hotdog</a></li>
+                                    <li><a href="#">Chicken Popcorn</a></li>
+                                </ul>
+                            </div>
+                            <!-- end footer-box-b -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-c">
+                                <h3>Contact Us</h3>
+                                <p>
+                                  <i class="fa fa-map-signs" aria-hidden="true"></i>
+                                  <span>Lot 6, No. 11 Hing Industrial Estate, Lorong Undan, Jalan Tuaran, Inanam, <br>88450 Kota Kinabalu, Sabah, Malaysia</span>
+                                </p>
+                                <p>
+                                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                                  <span>+60 14-832 2235</span>
+                                </p>
+                                <p>
+                                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                                  <span><a href="#">general@unclebob.com.my</a></span>
+                                </p>
+                                <p>
+                                  <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/unclebobmalaysia?igsh=eDJmdm5tM2Nqd29h" target="_blank">Uncle Bob Official Instagram</a>
+                                </p>
+                                <p>
+                                  <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/UncleBobFriedChicken" target="_blank">Uncle Bob Official Facebook</a>
+                                </p>
+                              </div>
+                            <!-- end footer-box-c -->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-d">
+                                <h3>Opening Hours</h3>
+
+                                <ul>
+                                    <li>
+                                        <p>Monday - Sunday </p>
+                                        <span> 10:00 AM - 9:00 PM</span>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                            <!-- end footer-box-d -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end footer-in-main -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+
+            <div id="copyright" class="copyright-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h6 class="copy-title"> This website is designed to fulfil the requirements of IMD318 Group Assignment. @2025</h6>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end copyright-main -->
+        </div>
+        <!-- end footer-box -->
+    </div>
+    <!-- end footer-main -->
+
+    <a href="#" class="scrollup" style="display: none;">Scroll</a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <!--ACTIVE NAVIGATION BAR-->
+    <script>
+        // Get the current URL
+        var currentURL = window.location.href;
+      
+        // Get all menu items
+        var menuItems = document.querySelectorAll('nav ul li a');
+      
+        // Loop through each menu item
+        menuItems.forEach(function(menuItem) {
+          // Check if the menu item's href matches the current URL
+          if (menuItem.href === currentURL) {
+            menuItem.parentNode.classList.add('active'); 
+          } else {
+            menuItem.parentNode.classList.remove('active'); 
+          }
+        });
+      </script>
+      <!--Clock-->
+     <script>
+        function updateClock() {
+    var now = new Date();
+    
+    // Get time components
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var amPm = hours >= 12 ? "PM" : "AM";
+
+    // Convert 24-hour to 12-hour format
+    hours = hours % 12 || 12; // If hour is 0, change to 12
+
+    // Format time to always show two digits
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    var timeString = hours + ":" + minutes + ":" + seconds + " " + amPm;
+    document.getElementById("digital-clock").textContent = timeString;
+
+    // Get day and date
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    var day = days[now.getDay()];
+    var date = now.getDate();
+    var month = months[now.getMonth()];
+    var year = now.getFullYear();
+
+    var fullDate = date + " " + month + " " + year;
+
+    document.getElementById("digital-day").textContent = day;
+    document.getElementById("digital-date").textContent = fullDate;
+}
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
+
+</body>
+</html>

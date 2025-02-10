@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>Branch</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel= "shortcut Icon" type="image/png" href="chicken.png">
+
+    <style>
+        /* Digital Clock Styling */
+        .digital-clock-container {
+            position: absolute;
+            right: 20px; /* Position on the top right */
+            top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white; /* Text color */
+            text-align: right;
+            z-index: 999;
+        }
+
+        .digital-clock {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .digital-day {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .digital-date {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="loader">
+        <div id="status"></div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock" class="digital-clock"></div>
+        <div id="digital-day" class="digital-day"></div>
+        <div id="digital-date" class="digital-date"></div>
+    </div>
+
+    <div id="site-header">
+        <header id="header" class="header-block-top">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu">
+                        <!-- navbar -->
+                        <nav class="navbar navbar-default" id="mainNav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="logo">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <img src="images/logo-unclebob.png" alt="" width="145" height="70">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="about_us.html">About us</a></li>
+                                    <li class="active"><a href="menu.html">Menu</a></li>
+                                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                                    <li class="active"><a href="blog.html">Branch</a></li>
+                                    <li class="active"><a href="certification.html">Certification</a></li>
+                                    <li class="active"><a href="contact_us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <!-- end nav-collapse -->
+                        </nav>
+                        <!-- end navbar -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </header>
+        <!-- end header -->
+    </div>
+	<!-- end site-header -->
+     
+
+    <div id="blog" class="blog-main pad-top-100 pad-bottom-100 parallax">
+        <div class="container">
+            <div class="row">
+                <h1 class="blog-title text-center"> Find Us Here</h1>
+
+                 <!-- Sidebar on the left -->
+                 <div class="col-md-3 sidebar">
+                    <button onclick="locateMe()">Locate Me</button>
+            
+                    <select id="division">
+                        <option value="">Find Outlet</option>
+                        <option value="kapit">Kapit</option>
+                        <option value="miri">Miri</option>
+                        <option value="Bintulu">Bintulu</option>
+                        <option value="sibu">Sibu</option>
+                        <option value="limbang">Limbang</option>
+                        <option value="Mukah">Mukah</option>
+                        <option value="Sri aman">Sri Aman</option>
+                        <option value="kuching">Kuching</option>
+                        <option value="Sarikei">Sarikei</option>
+                        <option value="Betong">Betong</option>
+                        <option value="Samarahan">Kota Samarahan</option>
+                        <option value="Serian">Serian</option>
+                    </select>
+                    <button onclick="searchBranches()">Search</button>
+                 
+                    <div id="branches-container" class="blog-box"></div>
+                    <div id="notification"></div>
+                </div>
+
+        <!-- Blog content -->
+        <div class="col-md-9 blog-box">
+                    <div class="blog-block">
+                        
+                 
+                        <div class="blog-img-box">
+                            <img src="plazamerdeka.jpg" alt="Plaza Merdeka, Kuching">
+                        </div>
+                        <div class="blog-dit">
+                            <h2>Plaza Merdeka, Kuching</h2>
+                            <div class="icon-box">
+                                <a href="https://maps.app.goo.gl/5aMJg3v67idzaRco7" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                <a href="https://ul.waze.com/ul?place=ChIJwwjzNgCn-zERKx0dVCj-50w&ll=1.55850300%2C110.34460460&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank"><i class="fa fa-car"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-block">
+                        <div class="blog-img-box">
+                            <img src="vivacity.jpg" alt="Vivacity Megamall, Kuching">
+                        </div>
+                        <div class="blog-dit">
+                            <h2>Vivacity Megamall, Kuching</h2>
+                            <div class="icon-box">
+                                <a href="https://maps.app.goo.gl/LbGeYUgdAeu4aDjH7" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                <a href="https://www.waze.com/en/live-map/directions?latlng=1.527121%2C110.370648" target="_blank"><i class="fa fa-car"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-block">
+                        <div class="blog-img-box">
+                            <img src="northbank2.jpg" alt="Vivacity Megamall, Kuching">
+                        </div>
+                        <div class="blog-dit">
+                            <h2>Northbank, Kuching</h2>
+                            <div class="icon-box">
+                                <a href="https://maps.app.goo.gl/tAeBAoaDv2DbHjUZ8" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                <a href="https://www.waze.com/en/live-map/directions?latlng=1.511543%2C110.393994" target="_blank"><i class="fa fa-car"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="blog-block">
+                        <div class="blog-img-box">
+                            <img src="EasternMall (2).jpg" alt="Vivacity Megamall, Kuching">
+                        </div>
+                        <div class="blog-dit">
+                            <h2>Eastern Megamall Siburan, Kuching</h2>
+                            <div class="icon-box">
+                                <a href="https://maps.app.goo.gl/AdzCXh21mVd4cFmk9" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                <a href="https://www.waze.com/en/live-map/directions?latlng=1.456182%2C110.445364" target="_blank"><i class="fa fa-car"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-block">
+                        <div class="blog-img-box">
+                            <img src="aiman mall (2).jpg" alt="Vivacity Megamall, Kuching">
+                        </div>
+                        <div class="blog-dit">
+                            <h2>Aiman Mall, Kota Samarahan</h2>
+                            <div class="icon-box">
+                                <a href="https://maps.app.goo.gl/NSKiV9D6NU3V3n7F7" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                <a href="https://waze.com" target="_blank"><i class="fa fa-car"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+        </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+        <div class="chicken-dance">
+            <img src="images/chicken.png" alt="Dancing Chicken" />
+        </div>
+    </div>
+    <!-- end blog-main -->
+    
+
+     <!-- ALL JS FILES -->
+     <script src="js/all.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <!-- ALL PLUGINS -->
+     <script src="js/custom.js"></script>
+     <script>
+// Simulated fetching of nearby branches (replace with a real API call)
+async function fetchNearbyBranches(lat, lng) {
+    const branches = [
+        { name: 'Uncle Bob Plaza Merdeka', address: 'Plaza Merdeka, Pearl Street, 93000 Kuching, Sarawak', lat: 1.5585, lng: 110.3448 },
+        { name: 'Uncle Bob Vivacity', address: 'LG, Vivacity Megamall, 93350 Kuching, Sarawak', lat: 1.5533, lng: 110.3666 },
+        { name: 'Uncle Bob Northbank', address: 'G96V+JM, 93350 Kuching, Sarawak', lat: 1.5521, lng: 110.3602 },
+        { name: 'Uncle Bob Eastern Mall Siburan', address: 'Unnamed Road, 94200 Siburan, Sarawak', lat: 1.5533, lng: 110.3666 },
+        { name: 'Uncle Bob Aiman Mall', address: 'Lot G47 Aiman Mall, Jalan Dato Mohd Musa, 94300 Kota Samarahan Sarawak.', lat: 1.5521, lng: 110.3602 },
+    ];
+
+    // Filter branches within a 10km radius
+    return branches.filter((branch) => {
+        const distance = calculateDistance(lat, lng, branch.lat, branch.lng);
+        console.log(`Distance from user to ${branch.name}: ${distance} km`); // Debugging with proper string interpolation
+        return distance <= 10; // 10 km radius
+    });
+}
+
+// Haversine formula for distance calculation
+function calculateDistance(lat1, lng1, lat2, lng2) {
+    const toRad = (value) => (value * Math.PI) / 180;
+    const R = 6371; // Earth's radius in km
+    const dLat = toRad(lat2 - lat1);
+    const dLng = toRad(lng2 - lng1);
+    const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+}
+
+// Example of geolocation function
+async function locateMe() {
+    // Check if Geolocation is available
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                console.log(`User's Location: Latitude: ${latitude}, Longitude: ${longitude}`); // Debugging
+
+                try {
+                    // Fetch nearby branches
+                    const branches = await fetchNearbyBranches(latitude, longitude);
+
+                    if (branches.length > 0) {
+                        // Store the branches in localStorage for access on the next page
+                        localStorage.setItem('nearbyBranches', JSON.stringify(branches));
+
+                        // Redirect to the results page
+                        window.location.href = 'nearby-branches.html';
+                    } else {
+                        alert('Uncle Bob Aiman Mall, Kota Samarahan '); // Alert for no nearby branches
+                    }
+                } catch (error) {
+                    console.error('Error fetching nearby branches:', error);
+                    alert('Unable to fetch nearby branches.');
+                }
+            },
+            (error) => {
+                console.error('Error getting location:', error);
+                alert('Unable to retrieve your location.');
+            }
+        );
+    } else {
+        alert('Geolocation is not supported by your browser.');
+    }
+}
+
+ // Array of branch details
+ const branches = [
+            {
+                division: 'kuching',
+                name: 'Plaza Merdeka',
+                address: 'Plaza Merdeka, Pearl Street, 93000 Kuching',
+                img: 'plazamerdeka.jpg',
+                googleMap: 'https://maps.app.goo.gl/5aMJg3v67idzaRco7',
+                waze: 'https://ul.waze.com/ul?place=ChIJwwjzNgCn-zERKx0dVCj-50w&ll=1.55850300%2C110.34460460&navigate=yes'
+            },
+            {
+                division: 'kuching',
+                name: 'Vivacity Megamall',
+                address: 'Vivacity Megamall, Kuching',
+                img: 'vivacity.jpg',
+                googleMap: 'https://maps.app.goo.gl/LbGeYUgdAeu4aDjH7',
+                waze: 'https://www.waze.com/en/live-map/directions?latlng=1.527121%2C110.370648'
+            },
+            {
+                division: 'kuching',
+                name: 'Northbank',
+                address: 'G96V+JM, 93350 Kuching, Sarawak',
+                img: 'northbank2.jpg',
+                googleMap: 'https://maps.app.goo.gl/tAeBAoaDv2DbHjUZ8',
+                waze: 'https://www.waze.com/en/live-map/directions?latlng=1.511543%2C110.393994'
+            },
+            {
+                division: 'kuching',
+                name: 'Eastern Megamall Siburan',
+                address: 'Unnamed Road, 94200 Siburan, Sarawak',
+                img: 'EasternMall (2).jpg',
+                googleMap: 'https://maps.app.goo.gl/AdzCXh21mVd4cFmk9',
+                waze: 'https://www.waze.com/en/live-map/directions?latlng=1.456182%2C110.445364'
+            },
+            {
+                division: 'samarahan',
+                name: 'Aiman Mall',
+                address: 'Aiman Mall, Kota Samarahan',
+                img: 'aiman mall (2).jpg',
+                googleMap: 'https://maps.app.goo.gl/NSKiV9D6NU3V3n7F7',
+                waze: 'https://waze.com'
+            }
+        ];
+
+        // Function to display the notification
+        function showNotification(message, type) {
+            const notification = document.getElementById('notification');
+            notification.innerHTML = `<p class="${type}">${message}</p>`;
+        }
+
+        // Function to search and display branches based on division
+        function searchBranches() {
+            const division = document.getElementById('division').value.toLowerCase(); // Convert user input to lowercase
+            const container = document.getElementById('branches-container');
+            const notification = document.getElementById('notification');
+
+            // Clear the container before displaying new results
+            container.innerHTML = '';
+
+            // Show notification if no division is selected
+            if (!division) {
+                showNotification('Please select a division.', 'error');
+                return;
+            }
+
+            // Filter branches by division (case-insensitive comparison)
+            const filteredBranches = branches.filter(branch => branch.division.toLowerCase() === division);
+
+            if (filteredBranches.length > 0) {
+                filteredBranches.forEach(branch => {
+                    const branchHTML = `
+                        <div class="branch-horizontal">
+                            <div class="branch-icon">
+                                <img src="${branch.img}" alt="${branch.name}">
+                            </div>
+                            <div class="branch-info">
+                                <h3 class="branch-title">${branch.name}</h3>
+                            </div>
+                        </div>`;
+                    
+                    // Append branch card to the container
+                    container.innerHTML += branchHTML;
+                });
+                showNotification('Branches found and displayed.', 'success');
+            } else {
+                // Display a message if no branches are found
+                container.innerHTML = '<p>No branches found in the selected division.</p>';
+                showNotification('No branches found in the selected division.', 'error');
+            }
+        }
+
+      </script>
+
+      <!--ACTIVE NAVIGATION BAR-->
+    <script>
+        // Get the current URL
+        var currentURL = window.location.href;
+      
+        // Get all menu items
+        var menuItems = document.querySelectorAll('nav ul li a');
+      
+        // Loop through each menu item
+        menuItems.forEach(function(menuItem) {
+          // Check if the menu item's href matches the current URL
+          if (menuItem.href === currentURL) {
+            menuItem.parentNode.classList.add('active'); 
+          } else {
+            menuItem.parentNode.classList.remove('active'); 
+          }
+        });
+      </script>
+      <!--Clock-->
+     <script>
+        function updateClock() {
+    var now = new Date();
+    
+    // Get time components
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var amPm = hours >= 12 ? "PM" : "AM";
+
+    // Convert 24-hour to 12-hour format
+    hours = hours % 12 || 12; // If hour is 0, change to 12
+
+    // Format time to always show two digits
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    var timeString = hours + ":" + minutes + ":" + seconds + " " + amPm;
+    document.getElementById("digital-clock").textContent = timeString;
+
+    // Get day and date
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    var day = days[now.getDay()];
+    var date = now.getDate();
+    var month = months[now.getMonth()];
+    var year = now.getFullYear();
+
+    var fullDate = date + " " + month + " " + year;
+
+    document.getElementById("digital-day").textContent = day;
+    document.getElementById("digital-date").textContent = fullDate;
+}
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
+      
+</body>
+</html>

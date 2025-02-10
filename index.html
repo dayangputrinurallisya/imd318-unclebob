@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>Home</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel= "shortcut Icon" type="image/png" href="chicken.png">
+
+    <style>
+        /* Digital Clock Styling */
+        .digital-clock-container {
+            position: absolute;
+            right: 20px; /* Position on the top right */
+            top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white; /* Text color */
+            text-align: right;
+        }
+
+        .digital-clock {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .digital-day {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .digital-date {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="loader">
+        <div id="status"></div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock" class="digital-clock"></div>
+        <div id="digital-day" class="digital-day"></div>
+        <div id="digital-date" class="digital-date"></div>
+    </div>
+
+    <!-- Video Background -->
+    <div id="video-background">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="images/UncleBob comp.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="site-header">
+        <header id="header" class="header-block-top">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu">
+                        <!-- navbar -->
+                        <nav class="navbar navbar-default" id="mainNav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="logo">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <img src="images/logo-unclebob.png" alt="" width="145" height="70">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="about_us.html">About us</a></li>
+                                    <li class="active"><a href="menu.html">Menu</a></li>
+                                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                                    <li class="active"><a href="blog.html">Branch</a></li>
+                                    <li class="active"><a href="certification.html">Certification</a></li>
+                                    <li class="active"><a href="contact_us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <!-- end nav-collapse -->
+                        </nav>
+                        <!-- end navbar -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </header>
+        <!-- end header -->
+    </div>
+	<!-- end site-header -->
+	
+    <div id="banner" class="banner full-screen-mode parallax">
+        <!-- Video Background -->
+        <div id="video-background">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="images/UncleBob comp.mp4" type="video/mp4">
+        </video>
+    </div>
+        <div class="container pr">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="banner-static">
+                    <div class="banner-text">
+                        <div class="banner-cell">
+                            <h1>Crave for something  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Authentic:Crispy:Juicy" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                            <h2>UncleBOB shall be your destination! </h2>
+                            <p>Taste the Love in Every Bite &#127831</p>
+                            <div class="book-btn">
+                                <a href="https://www.foodpanda.my/restaurants/new?lat=1.44537729&lng=110.4511467&vertical=restaurants&query=unclebob" class="table-btn hvr-underline-from-center">Order Now</a>
+                            </div>
+            
+                        </div>
+                        <!-- end banner-cell -->
+                    </div>
+                    <!-- end banner-text -->
+                </div>
+                <!-- end banner-static -->
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end banner -->
+
+    <div class="slidershow">
+        <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <div class="slide s1">
+                <video autoplay loop muted plays-inline class="background-clip" style="width: 100%; max-height: auto;">
+                    <source src="images/UncleBob Animation.mp4" type="video/mp4"> 
+                </video>
+            </div>
+            <div class="slide">
+                <img src="images/uncle bob promotion poster.jpeg" alt="">
+            </div>
+        </div>
+    
+        <div class="slider-navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+        </div>
+    </div>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <!--ACTIVE NAVIGATION BAR-->
+    <script>
+        // Get the current URL
+        var currentURL = window.location.href;
+      
+        // Get all menu items
+        var menuItems = document.querySelectorAll('nav ul li a');
+      
+        // Loop through each menu item
+        menuItems.forEach(function(menuItem) {
+          // Check if the menu item's href matches the current URL
+          if (menuItem.href === currentURL) {
+            menuItem.parentNode.classList.add('active'); 
+          } else {
+            menuItem.parentNode.classList.remove('active'); 
+          }
+        });
+      </script>
+      <!--Clock-->
+     <script>
+        function updateClock() {
+    var now = new Date();
+    
+    // Get time components
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var amPm = hours >= 12 ? "PM" : "AM";
+
+    // Convert 24-hour to 12-hour format
+    hours = hours % 12 || 12; // If hour is 0, change to 12
+
+    // Format time to always show two digits
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    var timeString = hours + ":" + minutes + ":" + seconds + " " + amPm;
+    document.getElementById("digital-clock").textContent = timeString;
+
+    // Get day and date
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    var day = days[now.getDay()];
+    var date = now.getDate();
+    var month = months[now.getMonth()];
+    var year = now.getFullYear();
+
+    var fullDate = date + " " + month + " " + year;
+
+    document.getElementById("digital-day").textContent = day;
+    document.getElementById("digital-date").textContent = fullDate;
+}
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>Reservation</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel= "shortcut Icon" type="image/png" href="chicken.png">
+
+    <style>
+        /* Digital Clock Styling */
+        .digital-clock-container {
+            position: absolute;
+            right: 20px; /* Position on the top right */
+            top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white; /* Text color */
+            text-align: right;
+        }
+
+        .digital-clock {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .digital-day {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .digital-date {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+    </style>
+
+</head>
+
+<style>
+
+    body{
+    background-image: url('images/unclebg.jpg');
+    background-attachment:fixed;
+    background-size:cover;
+    position:relative;
+    }
+    
+</style>
+
+<body>
+    <div id="loader">
+        <div id="status"></div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock" class="digital-clock"></div>
+        <div id="digital-day" class="digital-day"></div>
+        <div id="digital-date" class="digital-date"></div>
+    </div>
+
+    <div id="site-header">
+        <header id="header" class="header-block-top">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu">
+                        <!-- navbar -->
+                        <nav class="navbar navbar-default" id="mainNav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="logo">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <img src="images/logo-unclebob.png" alt="" width="145" height="70">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="about_us.html">About us</a></li>
+                                    <li class="active"><a href="menu.html">Menu</a></li>
+                                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                                    <li class="active"><a href="blog.html">Branch</a></li>
+                                    <li class="active"><a href="certification.html">Certification</a></li>
+                                    <li class="active"><a href="contact_us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <!-- end nav-collapse -->
+                        </nav>
+                        <!-- end navbar -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </header>
+        <!-- end header -->
+    </div>
+	<!-- end site-header -->
+
+    <div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="form-reservations-box">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <h2 class="block-title text-center">
+						Our Certifications			
+					</h2>
+                    
+                    <section>
+                        <div class="certificate">
+                        <div class="certs">
+                            <h3>Halal Certificate</h3>
+                            <p>Uncle Bob Malaysia is Halal Certified.</p>
+                        </div>
+                        
+                        <div class="halal-logo">
+                            <img src="images/uncle bob halal logo.png" width="300" height="300">
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="certificate">
+                        <div class="certs">
+                            <h3>Participation Certificate</h3>
+                            <p>The Largest Food Fair & Carnival Penang 19 August 2017.</p>
+                        </div>
+                        
+                        <div class="halal-logo">
+                            <img src="images/uncle bob certificate.jpg" width="300" height="400">
+                        </div>
+                    </section>
+
+                </div>
+                <!-- end reservations-box -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end reservations-main -->
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <!--ACTIVE NAVIGATION BAR-->
+    <script>
+        // Get the current URL
+        var currentURL = window.location.href;
+      
+        // Get all menu items
+        var menuItems = document.querySelectorAll('nav ul li a');
+      
+        // Loop through each menu item
+        menuItems.forEach(function(menuItem) {
+          // Check if the menu item's href matches the current URL
+          if (menuItem.href === currentURL) {
+            menuItem.parentNode.classList.add('active'); 
+          } else {
+            menuItem.parentNode.classList.remove('active'); 
+          }
+        });
+      </script>
+      <!--Clock-->
+     <script>
+        function updateClock() {
+    var now = new Date();
+    
+    // Get time components
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var amPm = hours >= 12 ? "PM" : "AM";
+
+    // Convert 24-hour to 12-hour format
+    hours = hours % 12 || 12; // If hour is 0, change to 12
+
+    // Format time to always show two digits
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    var timeString = hours + ":" + minutes + ":" + seconds + " " + amPm;
+    document.getElementById("digital-clock").textContent = timeString;
+
+    // Get day and date
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    var day = days[now.getDay()];
+    var date = now.getDate();
+    var month = months[now.getMonth()];
+    var year = now.getFullYear();
+
+    var fullDate = date + " " + month + " " + year;
+
+    document.getElementById("digital-day").textContent = day;
+    document.getElementById("digital-date").textContent = fullDate;
+}
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
+
+</body>
+</html>

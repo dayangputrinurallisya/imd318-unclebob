@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>About Us</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <link rel= "shortcut Icon" type="image/png" href="chicken.png">
+
+    <style>
+        /* Digital Clock Styling */
+        .digital-clock-container {
+            position: absolute;
+            right: 20px; /* Position on the top right */
+            top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white; /* Text color */
+            text-align: right;
+            z-index: 999;
+        }
+
+        .digital-clock {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .digital-day {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .digital-date {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="loader">
+        <div id="status"></div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock" class="digital-clock"></div>
+        <div id="digital-day" class="digital-day"></div>
+        <div id="digital-date" class="digital-date"></div>
+    </div>
+
+    <div id="site-header">
+        <header id="header" class="header-block-top">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu">
+                        <!-- navbar -->
+                        <nav class="navbar navbar-default" id="mainNav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="logo">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <img src="images/logo-unclebob.png" alt="" width="145" height="70">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="about_us.html">About us</a></li>
+                                    <li class="active"><a href="menu.html">Menu</a></li>
+                                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                                    <li class="active"><a href="blog.html">Branch</a></li>
+                                    <li class="active"><a href="certification.html">Certification</a></li>
+                                    <li class="active"><a href="contact_us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="popup">
+        <h3>UncleBob.com.my</h3>
+        <p>wants to know your location</p>
+        <button class="btn allow" onclick="allowLocation()">Allow</button>
+        <button class="btn deny" onclick="denyLocation()">Deny</button>
+    </div>
+
+    <div id="about" class="about-main pad-top-100 pad-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="block-title">About Us</h2>
+                        <h3>The Story Behind Uncle Bob: A Taste of Taiwan in Malaysia</h3>
+                        <p>UncleBOB, established in 2002, has been delighting Malaysians with authentic Taiwanese street snacks for over two decades. Our signature offering, the crispy yet tender fried chicken, is meticulously prepared without skin and fat, ensuring a healthier indulgence for our customers.</p>
+                        <p>With more than 290 kiosks and 680 locations nationwide, UncleBOB has become a beloved name among food enthusiasts across Malaysia.</p>
+                        <p>At UncleBOB, we are committed to continuous improvement. Our dedicated R&D team in Taiwan consistently innovates to introduce new Taiwanese snacks, enhancing the culinary experience for our patrons.</p>
+                        <p>Join us on this flavorful journey and discover why UncleBOB is synonymous with quality, taste, and tradition in Malaysia's vibrant food scene.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="about-images">
+                        <img src="images/unclebob.jpg" alt="About Main Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for glowing border effect
+        document.querySelectorAll('.about-images img').forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.boxShadow = '0 0 20px 5px rgba(255, 0, 0, 0.8)'; /* Red glow */
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.boxShadow = 'none'; /* Remove glow when mouse leaves */
+            });
+        });
+
+        window.onload = function() {
+        setTimeout(showPopup, 1000);  // Show after 1 second
+    };
+
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    function allowLocation() {
+        alert('Location access granted!');
+        closePopup();
+    }
+
+    function denyLocation() {
+        alert('Location access denied!');
+        closePopup();
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+    </script>
+
+<div id="our_team" class="team-main pad-top-100 pad-bottom-100 parallax">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                    <h2 class="block-title text-center">Our Commitment</h2>
+                    <p class="title-caption text-center">We value our partnerships and strive to exceed customer expectations.</p>
+                </div>
+
+                <div class="team-box">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6"> 
+                            <div class="sf-team"> 
+                                <div class="thumb">
+                                    <a href="#"><img src="images/uncle bob joy happiness.jpg" alt=""></a>
+                                </div>
+                                <div class="text-col">
+                                    <h3>Joy & Happiness</h3>
+                                    <p>UncleBOB: A partnership built on shared success – for franchisees and satisfied customers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6"> 
+                            <div class="sf-team">
+                                <div class="thumb">
+                                    <a href="#"><img src="images/uncle bob healthier snack 2.jpg" alt=""></a>
+                                </div>
+                                <div class="text-col">
+                                    <h3>Healthier Snacks</h3>
+                                    <p>Indulge in our signature fried chicken: Crispy perfection with all the flavor, minus the skin and fat.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6"> 
+                            <div class="sf-team">
+                                <div class="thumb">
+                                    <a href="#"><img src="images/uncle bob simplicity.jpg" alt=""></a>
+                                </div>
+                                <div class="text-col">
+                                    <h3>Simplicity</h3>
+                                    <p>Experience the ease of starting with our complete package – everything you need is included.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6"> 
+                            <div class="sf-team">
+                                <div class="thumb">
+                                    <a href="#"><img src="images/uncle bob affordable option.jpg" alt=""></a>
+                                </div>
+                                <div class="text-col">
+                                    <h3>Affordable Options</h3>
+                                    <p>Bringing Taiwanese street food to your community with UncleBOB's affordable franchise program.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+
+    <!--ACTIVE NAVIGATION BAR-->
+    <script>
+        // Get the current URL
+        var currentURL = window.location.href;
+      
+        // Get all menu items
+        var menuItems = document.querySelectorAll('nav ul li a');
+      
+        // Loop through each menu item
+        menuItems.forEach(function(menuItem) {
+          // Check if the menu item's href matches the current URL
+          if (menuItem.href === currentURL) {
+            menuItem.parentNode.classList.add('active'); 
+          } else {
+            menuItem.parentNode.classList.remove('active'); 
+          }
+        });
+      </script>
+      <!--Clock-->
+     <script>
+        function updateClock() {
+    var now = new Date();
+    
+    // Get time components
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var amPm = hours >= 12 ? "PM" : "AM";
+
+    // Convert 24-hour to 12-hour format
+    hours = hours % 12 || 12; // If hour is 0, change to 12
+
+    // Format time to always show two digits
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    var timeString = hours + ":" + minutes + ":" + seconds + " " + amPm;
+    document.getElementById("digital-clock").textContent = timeString;
+
+    // Get day and date
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    var day = days[now.getDay()];
+    var date = now.getDate();
+    var month = months[now.getMonth()];
+    var year = now.getFullYear();
+
+    var fullDate = date + " " + month + " " + year;
+
+    document.getElementById("digital-day").textContent = day;
+    document.getElementById("digital-date").textContent = fullDate;
+}
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
+
+</body>
+</html>
